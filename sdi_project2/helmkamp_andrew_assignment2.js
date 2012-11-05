@@ -41,38 +41,46 @@ var comfortLevel = function (city, degreeOfComfort) {
 	return statement;
 };
 
-var assignTickets = function (planeTickets, numTickets) {
+/*var assignTickets = function (planeTickets, numTickets) {
 	if (numTickets === 3 && hasTickets) {
 		var len = planeTickets.length;
-		for (var i = 0; i <= len; i++) {
+		for (var i = 0; i < len; i++) {
 			console.log(planeTickets[i] + " has been issued for the flight to Grand Forks.");
 		};
+		return planeTickets;
+	};
+};*/
+
+var assignTickets = function (planeTickets, numTickets) {
+	if (numTickets === 3 && hasTickets) {
+		for (var i = planeTickets.length - 1; i >= 0; i--) {
+			console.log(planeTickets[i] + " has been issued for the flight to Grand Forks.");
+		};
+
 		return planeTickets;
 	};
 };
 
 //Function Calls
 
-if (hasTickets) { 
-	var tickets = assignTickets(planeTickets, 3);
-	
-	if (tickets.length == 3) {
-		ticketCheck(hasTickets);
-		var woots = canIGetAWootWoot(woot);
-		var seats = everyoneHasSeats(3, "Chicago");
-		if (seats) {
-			var comfort = comfortLevel("Chicago", "very comfortable");
-			console.log(comfort);
-		} else{
-			var comfort = comfortLevel("Chicago", "very uncomfortable");
-			console.log(comfort);
-		};
-	} else{
-		console.log("You seem to be missing a ticket or have too many. Please check to see if everyone has their ticket.");
-	};
-	
+ 
+var tickets = assignTickets(planeTickets, 3);
 
+if (tickets.length == 3) {
+	ticketCheck(hasTickets);
+	var woots = canIGetAWootWoot(woot);
+	var seats = everyoneHasSeats(2, "Chicago");
+	if (seats) {
+		var comfort = comfortLevel("Chicago", "very comfortable");
+		console.log(comfort);
+	} else{
+		var comfort = comfortLevel("Chicago", "very uncomfortable");
+		console.log(comfort);
+	};
+} else{
+	console.log("You seem to be missing a ticket or have too many. Please check to see if everyone has their ticket.");
 };
+
 
 
 
