@@ -41,11 +41,18 @@ var myLibrary = function() {
 				);
 	};
 
+	var replaceSeperator = function(string) {
+		var newString = string.replace(/,/g,"/")
+
+		return newString;
+	};
+
 	return {
-		"phonePattern": phonePattern,
-		"emailPattern": emailPattern,
-		"urlPattern":   urlPattern,
-		"titleCase":    titleCase
+		"phonePattern":     phonePattern,
+		"emailPattern":     emailPattern,
+		"urlPattern":       urlPattern,
+		"titleCase":        titleCase,
+		"replaceSeperator": replaceSeperator
 	};
 };
 
