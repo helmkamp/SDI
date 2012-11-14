@@ -5,7 +5,7 @@
 ***********/
 
 var myLibrary = function() {
-	
+//String Methods	
 	//This method will check to see if the value given is a phone number.
 	var phonePattern = function(phoneNumber) {
 		var phoneReg = /(?:1-?)?\d{3}[\s-]?\d{3}[\s-]?\d{4}/;
@@ -41,20 +41,39 @@ var myLibrary = function() {
 				);
 	};
 
+	//This method will replace a , with a /
 	var replaceSeperator = function(string) {
 		var newString = string.replace(/,/g,"/")
 
 		return newString;
 	};
 
+//Number Methods
+	//This method will will format a number to make it have two decimal places
+	var formatToCurrency = function(num) {
+		var number = num.toFixed(2);
+
+		return number;
+	};
+
+
+
 	return {
 		"phonePattern":     phonePattern,
 		"emailPattern":     emailPattern,
 		"urlPattern":       urlPattern,
 		"titleCase":        titleCase,
-		"replaceSeperator": replaceSeperator
+		"replaceSeperator": replaceSeperator,
+		"formatToCurrency": formatToCurrency
 	};
 };
+
+
+
+
+
+
+
 
 
 
