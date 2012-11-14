@@ -12,3 +12,4 @@ console.log("URL test: " + myLib.urlPattern("http://www.fullsail.com"));
 console.log(myLib.titleCase("This is a title"));
 console.log(myLib.replaceSeperator("my,shopping,list"));
 console.log(myLib.formatToCurrency(10.323423234));
+console.log(myLib.stringToNumber("23"));

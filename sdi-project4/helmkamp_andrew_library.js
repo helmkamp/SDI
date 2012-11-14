@@ -56,6 +56,26 @@ var myLibrary = function() {
 		return number;
 	};
 
+	//This method will tell if a number is above or below a certain percent
+
+	//This method will find the difference of hours or days between two dates
+
+	//This method will convert a string to a number
+	var stringToNumber = function(string) {
+		if (isNaN(string)) {
+			return;
+		} else{
+			var num = Number(string);
+			return num;
+		};
+	};
+
+//Array methods
+	//This method will find the smallest number in an array that is greater than a given number
+
+	//This method will find the total value of just the numbers in an array
+
+	//This method will sort an array with numbers
 
 
 	return {
@@ -64,9 +84,17 @@ var myLibrary = function() {
 		"urlPattern":       urlPattern,
 		"titleCase":        titleCase,
 		"replaceSeperator": replaceSeperator,
-		"formatToCurrency": formatToCurrency
+		"formatToCurrency": formatToCurrency,
+		"stringToNumber":   stringToNumber
 	};
 };
+
+
+
+
+
+
+
 
 
 
