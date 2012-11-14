@@ -26,10 +26,10 @@ var data = {
 			"price": "15,900"
 		},
 		"0004": {
-			"makeModel": "",
-			"year": "",
-			"milage": "",
-			"price": ""
+			"makeModel": "Pontiac Sunfire",
+			"year": "2003",
+			"milage": "176881",
+			"price": "1,900"
 		}
 	}
 };
