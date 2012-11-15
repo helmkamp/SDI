@@ -86,7 +86,12 @@ var myLibrary = function() {
 
 	//This method will find the total value of just the numbers in an array
 
-	//This method will sort an array with numbers
+	//This method will sort an array of objects
+	var sortArray = function(obs) {
+		var sorted = obs.sort(function(a,b){return a.a-b.a});
+
+		return sorted;
+	};
 
 
 	return {
@@ -97,7 +102,8 @@ var myLibrary = function() {
 		"replaceSeperator": replaceSeperator,
 		"formatToCurrency": formatToCurrency,
 		"timeDifference":   timeDifference,
-		"stringToNumber":   stringToNumber
+		"stringToNumber":   stringToNumber,
+		"sortArray":        sortArray
 	};
 };
 
