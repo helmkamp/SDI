@@ -33,7 +33,6 @@ var myLibrary = function() {
 	//This method will break apart a string and capitalize the first letter of each word.
 	//I found this bit of code at http://stackoverflow.com/questions/196972/convert-string-to-title-case-with-javascript
 	var titleCase = function(string) {
-
 		return string.replace(/\w\S*/g, 
 					function(txt) {
 						return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -59,6 +58,18 @@ var myLibrary = function() {
 	//This method will tell if a number is above or below a certain percent
 
 	//This method will find the difference of hours or days between two dates
+	var timeDifference = function(date1, date2) {
+		var dateOne = new Date(date1);
+		var dateTwo = new Date(date2);
+
+		if (dateOne.getTime() > dateTwo.getTime()) {
+			var difference = dateOne.getTime() - dateTwo.getTime();
+		} else{
+			var difference = dateTwo.getTime() - dateOne.getTime();
+		};
+
+		return difference/3600000;
+	};
 
 	//This method will convert a string to a number
 	var stringToNumber = function(string) {
@@ -85,6 +96,7 @@ var myLibrary = function() {
 		"titleCase":        titleCase,
 		"replaceSeperator": replaceSeperator,
 		"formatToCurrency": formatToCurrency,
+		"timeDifference":   timeDifference,
 		"stringToNumber":   stringToNumber
 	};
 };
