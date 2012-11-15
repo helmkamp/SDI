@@ -11,5 +11,6 @@ console.log("Email address test: " + myLib.emailPattern("helmy@fullsail.edu"));
 console.log("URL test: " + myLib.urlPattern("http://www.fullsail.com"));
 console.log(myLib.titleCase("This is a title"));
 console.log(myLib.replaceSeperator("my,shopping,list"));
-console.log(myLib.formatToCurrency(10.323423234));
-console.log(myLib.stringToNumber("23"));
+console.log("Your formated number is " + myLib.formatToCurrency(10.323423234));
+console.log("The time difference is " + myLib.timeDifference("2012, 4, 11", "2012, 4, 12") + " hours.");
+console.log("Number: ", myLib.stringToNumber("23"));
