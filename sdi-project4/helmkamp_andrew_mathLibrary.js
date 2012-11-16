@@ -47,6 +47,7 @@ var mathLibrary = function() {
 			return;
 		} else{
 			var num = Number(string);
+			//var num = parseInt(string);
 			return num;
 		};
 	};
